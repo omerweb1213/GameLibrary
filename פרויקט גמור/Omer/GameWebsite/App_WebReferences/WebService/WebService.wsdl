@@ -1,0 +1,1594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetCategoryById">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CategoryID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCategoryByIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCategoryByIdResult" type="tns:Categories" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Categories">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CategoryID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CategoryName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCreditCardByCreditCounter">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreditCounter" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardByCreditCounterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditCardByCreditCounterResult" type="tns:CreditCards" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CreditCards">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CreditCounter" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalMoney" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExpireDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CvvCode" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TypeID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetCreditCardTypeByTypeID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TypeID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCreditCardTypeByTypeIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCreditCardTypeByTypeIDResult" type="tns:CreditCardTypes" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CreditCardTypes">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TypeID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGameByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GameID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGameByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGameByIDResult" type="tns:Games" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Games">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="GameID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GamePrice" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameReleaseDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameCategoryID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameProducerID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GamePicPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameConsole" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetOrderByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OrderID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrderByIDResult" type="tns:Orders" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Orders">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OrderID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrderDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetProducerByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProducerID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProducerByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProducerByIDResult" type="tns:Producers" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Producers">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ProducerID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProducerName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetUserByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserByIDResult" type="tns:Users" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Users">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserPass" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Lname" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CardNum" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="picpath" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="isAdmin" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="tns:Users" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTotalMoneyByUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTotalMoneyByUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTotalMoneyByUserIDResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CategoryName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCategoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddCategoryResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCreditCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TotalMoney" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CVVCode" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TypeID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCreditCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddCreditCardResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCreditCardType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TypeName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCreditCardTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddCreditCardTypeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddGame">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GameName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="GamePrice" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="GameCount" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="GameReleaseDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="GameCategoryID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="GameProducerID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="GamePicPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GameConsole" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddGameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddGameResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="GameID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddOrderResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddProducer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProducerName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddProducerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddProducerResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPass" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BirthDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lname" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreditNum" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pic" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddUserResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateCategory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CategoryID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CategoryName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCategoryResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateCreditCards">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreditCounter" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TotalMoney" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CVVCode" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="TypeID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCreditCardsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateCreditCardType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TypeID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TypeName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCreditCardTypeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateGames">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GameID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="GameName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="GamePrice" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="GameCount" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="GameReleaseDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="GameCategoryID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="GameProducerID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="GamePicPath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GameConsole" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateGamesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateOrders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OrderID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="GameID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOrdersResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateProducers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProducerID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProducerName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateProducersResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserPass" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BirthDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Fname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lname" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreditNum" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="picpath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUsersResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteGame">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GameID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteGameResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteProducer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProducerID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteProducerResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllCategories">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllCategoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllCategoriesResult" type="tns:ArrayOfCategories" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCategories">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Categories" nillable="true" type="tns:Categories" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllCreditCards">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllCreditCardsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllCreditCardsResult" type="tns:ArrayOfCreditCards" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCreditCards">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CreditCards" nillable="true" type="tns:CreditCards" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllCreditCardTypes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllCreditCardTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllCreditCardTypesResult" type="tns:ArrayOfCreditCardTypes" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCreditCardTypes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CreditCardTypes" nillable="true" type="tns:CreditCardTypes" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllGames">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllGamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllGamesResult" type="tns:ArrayOfGames" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGames">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Games" nillable="true" type="tns:Games" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllOrders">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllOrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllOrdersResult" type="tns:ArrayOfOrders" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfOrders">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Orders" nillable="true" type="tns:Orders" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllProducers">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllProducersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllProducersResult" type="tns:ArrayOfProducers" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProducers">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Producers" nillable="true" type="tns:Producers" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllUsers">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllUsersResult" type="tns:ArrayOfUsers" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUsers">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Users" nillable="true" type="tns:Users" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPcGames">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPcGamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPcGamesResult" type="tns:ArrayOfGames" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPsGames">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPsGamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPsGamesResult" type="tns:ArrayOfGames" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetXboxGames">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetXboxGamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetXboxGamesResult" type="tns:ArrayOfGames" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCategoryByIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCategoryById" />
+  </wsdl:message>
+  <wsdl:message name="GetCategoryByIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCategoryByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardByCreditCounterSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCreditCardByCreditCounter" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardByCreditCounterSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditCardByCreditCounterResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardTypeByTypeIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCreditCardTypeByTypeID" />
+  </wsdl:message>
+  <wsdl:message name="GetCreditCardTypeByTypeIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCreditCardTypeByTypeIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGameByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGameByID" />
+  </wsdl:message>
+  <wsdl:message name="GetGameByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGameByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderByID" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProducerByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProducerByID" />
+  </wsdl:message>
+  <wsdl:message name="GetProducerByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProducerByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserByID" />
+  </wsdl:message>
+  <wsdl:message name="GetUserByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalMoneyByUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTotalMoneyByUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalMoneyByUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTotalMoneyByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:AddCategory" />
+  </wsdl:message>
+  <wsdl:message name="AddCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:AddCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCreditCardSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCreditCard" />
+  </wsdl:message>
+  <wsdl:message name="AddCreditCardSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCreditCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCreditCardTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCreditCardType" />
+  </wsdl:message>
+  <wsdl:message name="AddCreditCardTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCreditCardTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddGameSoapIn">
+    <wsdl:part name="parameters" element="tns:AddGame" />
+  </wsdl:message>
+  <wsdl:message name="AddGameSoapOut">
+    <wsdl:part name="parameters" element="tns:AddGameResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:AddOrder" />
+  </wsdl:message>
+  <wsdl:message name="AddOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:AddOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddProducerSoapIn">
+    <wsdl:part name="parameters" element="tns:AddProducer" />
+  </wsdl:message>
+  <wsdl:message name="AddProducerSoapOut">
+    <wsdl:part name="parameters" element="tns:AddProducerResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddUserSoapIn">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="AddUserSoapOut">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCategorySoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCategory" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCategorySoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCreditCardsSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCreditCards" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCreditCardsSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCreditCardsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCreditCardTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCreditCardType" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCreditCardTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCreditCardTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGamesSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateGames" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGamesSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateGamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateOrders" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProducersSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateProducers" />
+  </wsdl:message>
+  <wsdl:message name="UpdateProducersSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateProducersResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUsers" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteGameSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteGame" />
+  </wsdl:message>
+  <wsdl:message name="DeleteGameSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteGameResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteProducerSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteProducer" />
+  </wsdl:message>
+  <wsdl:message name="DeleteProducerSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteProducerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCategoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllCategories" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCategoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCreditCardsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllCreditCards" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCreditCardsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllCreditCardsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCreditCardTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllCreditCardTypes" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCreditCardTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllCreditCardTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllGamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllGames" />
+  </wsdl:message>
+  <wsdl:message name="GetAllGamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllGamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllOrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllOrders" />
+  </wsdl:message>
+  <wsdl:message name="GetAllOrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllProducersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllProducers" />
+  </wsdl:message>
+  <wsdl:message name="GetAllProducersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllProducersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="GetAllUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPcGamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPcGames" />
+  </wsdl:message>
+  <wsdl:message name="GetPcGamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPcGamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPsGamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPsGames" />
+  </wsdl:message>
+  <wsdl:message name="GetPsGamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPsGamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetXboxGamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetXboxGames" />
+  </wsdl:message>
+  <wsdl:message name="GetXboxGamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetXboxGamesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="GetCategoryById">
+      <wsdl:input message="tns:GetCategoryByIdSoapIn" />
+      <wsdl:output message="tns:GetCategoryByIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardByCreditCounter">
+      <wsdl:input message="tns:GetCreditCardByCreditCounterSoapIn" />
+      <wsdl:output message="tns:GetCreditCardByCreditCounterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardTypeByTypeID">
+      <wsdl:input message="tns:GetCreditCardTypeByTypeIDSoapIn" />
+      <wsdl:output message="tns:GetCreditCardTypeByTypeIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGameByID">
+      <wsdl:input message="tns:GetGameByIDSoapIn" />
+      <wsdl:output message="tns:GetGameByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderByID">
+      <wsdl:input message="tns:GetOrderByIDSoapIn" />
+      <wsdl:output message="tns:GetOrderByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProducerByID">
+      <wsdl:input message="tns:GetProducerByIDSoapIn" />
+      <wsdl:output message="tns:GetProducerByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByID">
+      <wsdl:input message="tns:GetUserByIDSoapIn" />
+      <wsdl:output message="tns:GetUserByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalMoneyByUserID">
+      <wsdl:input message="tns:GetTotalMoneyByUserIDSoapIn" />
+      <wsdl:output message="tns:GetTotalMoneyByUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCategory">
+      <wsdl:input message="tns:AddCategorySoapIn" />
+      <wsdl:output message="tns:AddCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCreditCard">
+      <wsdl:input message="tns:AddCreditCardSoapIn" />
+      <wsdl:output message="tns:AddCreditCardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCreditCardType">
+      <wsdl:input message="tns:AddCreditCardTypeSoapIn" />
+      <wsdl:output message="tns:AddCreditCardTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddGame">
+      <wsdl:input message="tns:AddGameSoapIn" />
+      <wsdl:output message="tns:AddGameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrder">
+      <wsdl:input message="tns:AddOrderSoapIn" />
+      <wsdl:output message="tns:AddOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProducer">
+      <wsdl:input message="tns:AddProducerSoapIn" />
+      <wsdl:output message="tns:AddProducerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input message="tns:AddUserSoapIn" />
+      <wsdl:output message="tns:AddUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCategory">
+      <wsdl:input message="tns:UpdateCategorySoapIn" />
+      <wsdl:output message="tns:UpdateCategorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCreditCards">
+      <wsdl:input message="tns:UpdateCreditCardsSoapIn" />
+      <wsdl:output message="tns:UpdateCreditCardsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCreditCardType">
+      <wsdl:input message="tns:UpdateCreditCardTypeSoapIn" />
+      <wsdl:output message="tns:UpdateCreditCardTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGames">
+      <wsdl:input message="tns:UpdateGamesSoapIn" />
+      <wsdl:output message="tns:UpdateGamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrders">
+      <wsdl:input message="tns:UpdateOrdersSoapIn" />
+      <wsdl:output message="tns:UpdateOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProducers">
+      <wsdl:input message="tns:UpdateProducersSoapIn" />
+      <wsdl:output message="tns:UpdateProducersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUsers">
+      <wsdl:input message="tns:UpdateUsersSoapIn" />
+      <wsdl:output message="tns:UpdateUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input message="tns:DeleteUserSoapIn" />
+      <wsdl:output message="tns:DeleteUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGame">
+      <wsdl:input message="tns:DeleteGameSoapIn" />
+      <wsdl:output message="tns:DeleteGameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProducer">
+      <wsdl:input message="tns:DeleteProducerSoapIn" />
+      <wsdl:output message="tns:DeleteProducerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCategories">
+      <wsdl:input message="tns:GetAllCategoriesSoapIn" />
+      <wsdl:output message="tns:GetAllCategoriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCreditCards">
+      <wsdl:input message="tns:GetAllCreditCardsSoapIn" />
+      <wsdl:output message="tns:GetAllCreditCardsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCreditCardTypes">
+      <wsdl:input message="tns:GetAllCreditCardTypesSoapIn" />
+      <wsdl:output message="tns:GetAllCreditCardTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGames">
+      <wsdl:input message="tns:GetAllGamesSoapIn" />
+      <wsdl:output message="tns:GetAllGamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrders">
+      <wsdl:input message="tns:GetAllOrdersSoapIn" />
+      <wsdl:output message="tns:GetAllOrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProducers">
+      <wsdl:input message="tns:GetAllProducersSoapIn" />
+      <wsdl:output message="tns:GetAllProducersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <wsdl:input message="tns:GetAllUsersSoapIn" />
+      <wsdl:output message="tns:GetAllUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPcGames">
+      <wsdl:input message="tns:GetPcGamesSoapIn" />
+      <wsdl:output message="tns:GetPcGamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPsGames">
+      <wsdl:input message="tns:GetPsGamesSoapIn" />
+      <wsdl:output message="tns:GetPsGamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetXboxGames">
+      <wsdl:input message="tns:GetXboxGamesSoapIn" />
+      <wsdl:output message="tns:GetXboxGamesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCategoryById">
+      <soap:operation soapAction="http://tempuri.org/GetCategoryById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardByCreditCounter">
+      <soap:operation soapAction="http://tempuri.org/GetCreditCardByCreditCounter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardTypeByTypeID">
+      <soap:operation soapAction="http://tempuri.org/GetCreditCardTypeByTypeID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGameByID">
+      <soap:operation soapAction="http://tempuri.org/GetGameByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderByID">
+      <soap:operation soapAction="http://tempuri.org/GetOrderByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProducerByID">
+      <soap:operation soapAction="http://tempuri.org/GetProducerByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByID">
+      <soap:operation soapAction="http://tempuri.org/GetUserByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalMoneyByUserID">
+      <soap:operation soapAction="http://tempuri.org/GetTotalMoneyByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCategory">
+      <soap:operation soapAction="http://tempuri.org/AddCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCreditCard">
+      <soap:operation soapAction="http://tempuri.org/AddCreditCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCreditCardType">
+      <soap:operation soapAction="http://tempuri.org/AddCreditCardType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddGame">
+      <soap:operation soapAction="http://tempuri.org/AddGame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrder">
+      <soap:operation soapAction="http://tempuri.org/AddOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProducer">
+      <soap:operation soapAction="http://tempuri.org/AddProducer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCategory">
+      <soap:operation soapAction="http://tempuri.org/UpdateCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCreditCards">
+      <soap:operation soapAction="http://tempuri.org/UpdateCreditCards" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCreditCardType">
+      <soap:operation soapAction="http://tempuri.org/UpdateCreditCardType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGames">
+      <soap:operation soapAction="http://tempuri.org/UpdateGames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrders">
+      <soap:operation soapAction="http://tempuri.org/UpdateOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProducers">
+      <soap:operation soapAction="http://tempuri.org/UpdateProducers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUsers">
+      <soap:operation soapAction="http://tempuri.org/UpdateUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGame">
+      <soap:operation soapAction="http://tempuri.org/DeleteGame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProducer">
+      <soap:operation soapAction="http://tempuri.org/DeleteProducer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCategories">
+      <soap:operation soapAction="http://tempuri.org/GetAllCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCreditCards">
+      <soap:operation soapAction="http://tempuri.org/GetAllCreditCards" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCreditCardTypes">
+      <soap:operation soapAction="http://tempuri.org/GetAllCreditCardTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGames">
+      <soap:operation soapAction="http://tempuri.org/GetAllGames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrders">
+      <soap:operation soapAction="http://tempuri.org/GetAllOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProducers">
+      <soap:operation soapAction="http://tempuri.org/GetAllProducers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <soap:operation soapAction="http://tempuri.org/GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPcGames">
+      <soap:operation soapAction="http://tempuri.org/GetPcGames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPsGames">
+      <soap:operation soapAction="http://tempuri.org/GetPsGames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetXboxGames">
+      <soap:operation soapAction="http://tempuri.org/GetXboxGames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCategoryById">
+      <soap12:operation soapAction="http://tempuri.org/GetCategoryById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardByCreditCounter">
+      <soap12:operation soapAction="http://tempuri.org/GetCreditCardByCreditCounter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardTypeByTypeID">
+      <soap12:operation soapAction="http://tempuri.org/GetCreditCardTypeByTypeID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGameByID">
+      <soap12:operation soapAction="http://tempuri.org/GetGameByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderByID">
+      <soap12:operation soapAction="http://tempuri.org/GetOrderByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProducerByID">
+      <soap12:operation soapAction="http://tempuri.org/GetProducerByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByID">
+      <soap12:operation soapAction="http://tempuri.org/GetUserByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalMoneyByUserID">
+      <soap12:operation soapAction="http://tempuri.org/GetTotalMoneyByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCategory">
+      <soap12:operation soapAction="http://tempuri.org/AddCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCreditCard">
+      <soap12:operation soapAction="http://tempuri.org/AddCreditCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCreditCardType">
+      <soap12:operation soapAction="http://tempuri.org/AddCreditCardType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddGame">
+      <soap12:operation soapAction="http://tempuri.org/AddGame" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrder">
+      <soap12:operation soapAction="http://tempuri.org/AddOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProducer">
+      <soap12:operation soapAction="http://tempuri.org/AddProducer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap12:operation soapAction="http://tempuri.org/AddUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCategory">
+      <soap12:operation soapAction="http://tempuri.org/UpdateCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCreditCards">
+      <soap12:operation soapAction="http://tempuri.org/UpdateCreditCards" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCreditCardType">
+      <soap12:operation soapAction="http://tempuri.org/UpdateCreditCardType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGames">
+      <soap12:operation soapAction="http://tempuri.org/UpdateGames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrders">
+      <soap12:operation soapAction="http://tempuri.org/UpdateOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProducers">
+      <soap12:operation soapAction="http://tempuri.org/UpdateProducers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUsers">
+      <soap12:operation soapAction="http://tempuri.org/UpdateUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap12:operation soapAction="http://tempuri.org/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteGame">
+      <soap12:operation soapAction="http://tempuri.org/DeleteGame" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProducer">
+      <soap12:operation soapAction="http://tempuri.org/DeleteProducer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCategories">
+      <soap12:operation soapAction="http://tempuri.org/GetAllCategories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCreditCards">
+      <soap12:operation soapAction="http://tempuri.org/GetAllCreditCards" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCreditCardTypes">
+      <soap12:operation soapAction="http://tempuri.org/GetAllCreditCardTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllGames">
+      <soap12:operation soapAction="http://tempuri.org/GetAllGames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllOrders">
+      <soap12:operation soapAction="http://tempuri.org/GetAllOrders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllProducers">
+      <soap12:operation soapAction="http://tempuri.org/GetAllProducers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <soap12:operation soapAction="http://tempuri.org/GetAllUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPcGames">
+      <soap12:operation soapAction="http://tempuri.org/GetPcGames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPsGames">
+      <soap12:operation soapAction="http://tempuri.org/GetPsGames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetXboxGames">
+      <soap12:operation soapAction="http://tempuri.org/GetXboxGames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="http://localhost:50301/GameStoreProject/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="http://localhost:50301/GameStoreProject/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

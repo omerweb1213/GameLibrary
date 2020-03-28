@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CreditCards">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEAEACAAAAAAAAAEAAQAAAAEAAAAABQgAAAQIABAAAA=</HashCode>
+      <FileName>App_Code\CreditCards.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Categories">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAgAEAAAAIAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\Categories.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CreditCardTypes">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAABAgAAAQIAAAAAA=</HashCode>
+      <FileName>App_Code\CreditCardTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Games">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAQAKAAAICkEAGAAIABAASCACAEAgAgAAAAAAA=</HashCode>
+      <FileName>App_Code\Games.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyAdoHelperAccess">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EaQCgJAgAAYQAiiVAAQiKEAAAAREAAwlAAAQCAEAVIg=</HashCode>
+      <FileName>App_Code\MyAdoHelperAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Orders">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAABAAAAAAAAAECAEAAAgBAAAAAAAAEAAAAAgAAAA=</HashCode>
+      <FileName>App_Code\Orders.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="photo">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>App_Code\photo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Producers">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAABAAAEEAAAAAAAAAAAAAAAAAAABAAAAAQ=</HashCode>
+      <FileName>App_Code\Producers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Users">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAEACACBAAkHgAAAAxACABAAAgAQUAAAAEAEAA=</HashCode>
+      <FileName>App_Code\Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
